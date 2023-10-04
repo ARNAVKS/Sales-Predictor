@@ -50,6 +50,7 @@ zero[0,1] = tv
 zero[0,2] = rad
 zero[0,3] = news
 
-#finding prediction 
+#finding prediction (input_data_array).(parameter_beta_array)=prediction_array
+#we will get output array of (1,1), so we will print the [0,0] to print the actual predicted values
 prediction = np.matmul(zero, Beta)
 st.write("**Sales :**",prediction[0,0])
