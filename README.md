@@ -15,7 +15,7 @@ where $y_{pred}$ is the predicted value of the input value $\{ x_1, x_2 \ \text{
 
 We can write this generel equation as,
 \
-$X\cdot\beta=y_{pred}$
+$y_{pred}=X\cdot\beta$
 
 $X$ is an array that contain $x_1, x_2, x_3$ but with a extra constant 1 in each row. As the given table has total 200 data, so that array $X$ will be a shape of $(200\text{x}4)$ and the array will look like this,
 
