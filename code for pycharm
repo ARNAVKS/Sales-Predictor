@@ -1,0 +1,32 @@
+import numpy as np
+import pandas as pd
+import streamlit as st
+st.title("Sales Predictor")
+adv = pd.read_csv("advertising.csv")
+X = np.zeros(800)
+X = X.reshape(200,4)
+for i in range(0,200):
+  X[i,0] = 1
+  X[i,1] = adv['TV'][i]
+  X[i,2] = adv['Radio'][i]
+  X[i,3] = adv['Newspaper'][i]
+y = np.zeros(200)
+y = y.reshape(200,1)
+for i in range(0,200):
+  y[i] = adv['Sales'][i]
+Xt = np.transpose(X)
+into = np.matmul(Xt,X)
+into_inv = np.linalg.inv(into)
+cx = np.matmul(Xt,y)
+Beta = np.matmul(into_inv,cx)
+tv = st.number_input("Enter the TV price :")
+rad = st.number_input("Enter the radio price :")
+news = st.number_input("Enter the newspaper price :")
+zero = np.zeros(4)
+zero = zero.reshape(1,4)
+zero[0,0] = 1
+zero[0,1] = tv
+zero[0,2] = rad
+zero[0,3] = news
+prediction = np.matmul(zero, Beta)
+st.write("**Sales :**",prediction[0,0])
