@@ -92,11 +92,11 @@ $$ y_{pred}=\begin{bmatrix}
         y_{pred}^{200} \\
         \end{bmatrix}_{200\text{x}1}$$
 
-This above $y_{pred}$ array has all the predicted value of $y$ by taking all the the data of $x_{1}$, $x_{2}$ and $x_{3}$ simultaenously one by one.
+This above $y_{pred}$ array has all the predicted value of $y$ by taking all the the data of column $x_{1}$, $x_{2}$ and $x_{3}$ one by one.
 
-To find the prediction with random $x_{1}, x_{2}\ \text{and} \ x_{3}$, which is inputted by the user,
+To find the prediction with a random data $a, b\ \text{and} \ c$, which is inputted by the user,
 
-$$\text{prediction}=\begin{bmatrix} 1 & x_{1} & x_{2} & x_{3} \end{bmatrix} \cdot \begin{bmatrix}
+$$\text{prediction}=\begin{bmatrix} 1 & a & b & c \end{bmatrix} \cdot \begin{bmatrix}
                                       \beta_0  \\
                                       \beta_1  \\
                                       \beta_2  \\
