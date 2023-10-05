@@ -92,7 +92,7 @@ $$ y_{pred}=\begin{bmatrix}
         y_{pred}^{200} \\
         \end{bmatrix}_{200\text{x}1}$$
 
-This above $y_{pred}$ array has all the predicted value of $y$ by taking all the the data of column $x_{1}$, $x_{2}$ and $x_{3}$ one by one.
+This above $y_{pred}$ array has all the predicted value of $y$ by taking all the the datas from column $x_{1}$, $x_{2}$ and $x_{3}$ in each rows one by one.
 
 To find the prediction with a random data $a, b\ \text{and} \ c$, which is inputted by the user,
 
