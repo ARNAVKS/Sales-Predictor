@@ -4,8 +4,6 @@ Hey! I made this sales-predictor using matrix method for Multivariate Linear Reg
 **NOTE** : In this project we denote $x_{j}$ as the input column name where $j=1,2\ \text{and}\ 3$. Also $x_{j}^{i}$ is denoted as the data in $x_{j}$ column where $i=1,2,3,.......,200$.
 ##
 
-In the given table ***advertising.csv*** there are 4 columns. We denote columns **TV** as $x_1$, **Radio** as $x_2$ and **Newspaper** as $x_3$. Column **Sales** will be our target variable which we denote as $y$.
-
 General formula for Multivariate Linear Regression for 3 inputs will be,
 \
 $y_{pred}=\beta_{0}+\beta_{1}{x_{1}}+\beta_{2}{x_{2}}+\beta_{3}{x_{3}}$ 
@@ -13,11 +11,13 @@ $y_{pred}=\beta_{0}+\beta_{1}{x_{1}}+\beta_{2}{x_{2}}+\beta_{3}{x_{3}}$
 where $y_{pred}$ is the predicted value of the input value $\{ x_1, x_2 \ \text{and} \ x_3 \}$ and $\beta_{0}, \beta_{1}, \beta_{2} \ \text{and} \ \beta_{3}$ are the parameter that gives you the best prediction.
 ##
 
-We can write this generel equation as,
+In the given table ***advertising.csv*** there are 4 columns. We denote columns **TV** as $x_1$, **Radio** as $x_2$ and **Newspaper** as $x_3$. **Sales** column will be our target data which is denoted by $y$.
+
+We can write this general formula as,
 \
 $y_{pred}=X\cdot\beta$
 
-$X$ is an array that contain $x_1, x_2, x_3$ but with a extra constant 1 in each row. As the given table has total 200 data, so that array $X$ will be a shape of $(200\text{x}4)$ and the array will look like this,
+$X$ is an array that contain data of $x_1, x_2, x_3$ but with a extra constant 1 in each row. As the given table has total 200 data, so that array $X$ will be a shape of $(200\text{x}4)$ and the array will look like this,
 
 $$X=\begin{bmatrix}
      1 & x_{1}^{1} & x_{2}^{1} & x_{3}^{1} \\
